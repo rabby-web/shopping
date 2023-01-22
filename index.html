@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping</title>
+    <!-- Tailwind Css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.47.0/dist/full.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <!-- navbar -->
+    <div class="navbar bg-base-300">
+        <div class="flex-1">
+          <a class="btn btn-ghost normal-case text-xl">Shopping Card</a>
+        </div>
+        <div class="flex-none gap-2">
+          <div class="form-control">
+            <input type="text" placeholder="Search" class="input input-bordered" />
+          </div>
+          <div class="dropdown dropdown-end">
+            <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+              <div class="w-10 rounded-full">
+                <img src="https://placeimg.com/80/80/people" />
+              </div>
+            </label>
+            <ul tabindex="0" class="mt-3 p-2 shadow menu menu-compact dropdown-content bg-base-100 rounded-box w-52">
+              <li>
+                <a class="justify-between">
+                  Profile
+                  <span class="badge">New</span>
+                </a>
+              </li>
+              <li><a>Settings</a></li>
+              <li><a>Logout</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- /navbar -->
+    <!-- bottom nav -->
+    <div class="btm-nav z-10 ">
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" /></svg>
+        <span class="btm-nav-label">Home</span>
+      </button>
+      <button class="active">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+        <span class="btm-nav-label">Shopping</span>
+      </button>
+      <button>
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+        <span class="btm-nav-label">Statics</span>
+      </button>
+    </div>
+    <!-- /bottom nav -->
+    <!-- card section -->
+    <section class="container m-5 pb-10">
+      <div class="grid grid-cols-2 gap-8 m-5 p-5 divide-x">
+        <!-- product card -->
+        <div class="grid grid-cols-2 gap-4">
+          <!-- [card-1] -->
+          <div class="card h-96 bg-base-100 shadow-xl border border-indigo-700">
+            <figure><img src="c-2.png" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">T-Shart BD</h2>
+              <p>Price:$<span>100</span></p>
+              
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" onclick="addToCard(this)">Buy Now 1</button>
+              </div>
+            </div>
+          </div>
+          <!-- [card-2] -->
+          <div class="card h-96 bg-base-100 shadow-xl border border-indigo-700">
+            <figure><img src="custom-ts.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">T-Shart US</h2>
+              <p>Price:$<span>110</span></p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" onclick="addToCard(this)">Buy Now 2</button>
+              </div>
+            </div>
+          </div>
+          <!-- [card-3] -->
+          <div class="card h-96 bg-base-100 shadow-xl border border-indigo-700">
+            <figure><img src="c-1.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Shart</h2>
+              <p>Price:$<span>140</span></p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" onclick="addToCard(this)">Buy Now 3</button>
+              </div>
+            </div>
+          </div>
+          <!-- [card-4] -->
+          <div class="card h-96 bg-base-100 shadow-xl border border-indigo-700">
+            <figure><img src="c-2.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Pant</h2>
+              <p>Price:$<span>160</span></p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" onclick="addToCard(this)">Buy Now 4</button>
+              </div>
+            </div>
+          </div>
+          <!-- [card-5] -->
+          <div class="card h-96 bg-base-100 shadow-xl border border-indigo-700">
+            <figure><img src="c-4.jpg" alt="Shoes" /></figure>
+            <div class="card-body">
+              <h2 class="card-title">Shoes</h2>
+              <p>Price:$<span>350</span></p>
+              <div class="card-actions justify-end">
+                <button class="btn btn-primary" onclick="addToCard(this)">Buy Now 5</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- product price -->
+        <div>
+          <div class="text-center text-4xl shadow-lg shadow-blue-600/20 mb-5">Total Added Product <span class="text-blue-500" id="total-add-product">0</span></div>
+          <!-- table -->
+          <div class="overflow-x-auto">
+            <table class="table table-zebra w-full">
+              <!-- head -->
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Product Name</th>
+                  <th></th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody id="card-product">
+
+                <!-- row 1 -->
+                <tr>
+                  
+                </tr>
+
+              </tbody>
+              
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- script -->
+    <script src="shopping.js"></script>
+    <!-- Tailwind JS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</body>
+</html>
